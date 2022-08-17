@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import CardList from './components/card-list/card-list.component';
-import logo from './logo.svg';
+
 import SearchBox from './components/search-box/search-box.component';
 import './App.css';
 
@@ -36,7 +36,7 @@ onSearchChange = (event) => {
 };
 
   render() {
-    const { monsters,searchField } = this.state;
+    const { searchField } = this.state;
     const { onSearchChange } = this;
     const filteredMonsters= this.state.monsters.filter((monster) => {
       return monster.name.toLocaleLowerCase().includes(searchField);
